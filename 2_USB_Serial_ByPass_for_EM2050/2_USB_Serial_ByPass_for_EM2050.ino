@@ -18,6 +18,15 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);
 
+#if defined(ECHOSTAR_PWR_ENABLE_PIN)
+  pinMode(ECHOSTAR_PWR_ENABLE_PIN, OUTPUT);
+  digitalWrite(ECHOSTAR_PWR_ENABLE_PIN, HIGH);
+#endif
+
+#if defined(DPDT_PWR_ENABLE_PIN)
+  pinMode(DPDT_PWR_ENABLE_PIN, OUTPUT);
+  digitalWrite(DPDT_PWR_ENABLE_PIN, HIGH);
+#endif
   pinMode(DPDT_CTRL_PIN, OUTPUT);
   digitalWrite(DPDT_CTRL_PIN, HIGH);
 
