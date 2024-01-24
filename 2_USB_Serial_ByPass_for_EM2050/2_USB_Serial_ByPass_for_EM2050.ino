@@ -5,13 +5,13 @@
  *        The DPDT RF Switch control signal can be reversed by sending '*' character to the USB USB_SERIAL.
  *
  * @author mtnguyen
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 #define SWITCH_REVERSING_CONTROL_DEFAULT_VALUE true
 volatile int switch_reversing_control = SWITCH_REVERSING_CONTROL_DEFAULT_VALUE;
 
-void setup()
+void setup(void)
 {
   switch_reversing_control = SWITCH_REVERSING_CONTROL_DEFAULT_VALUE;
 
@@ -49,7 +49,7 @@ void setup()
   digitalWrite(LED_BUILTIN, LOW);
 }
 
-void loop()
+void loop(void)
 {
   if (ECHOSTAR_SERIAL.available())
   {
